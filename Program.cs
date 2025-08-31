@@ -1,5 +1,8 @@
-﻿using Bogus;
+﻿using BenchmarkDotNet.Configs;
+using BenchmarkDotNet.Running;
+using Bogus;
 using ConsoleTest.DataGenerate;
+using ConsoleTest.SpanBench;
 
 namespace ConsoleTest;
 
@@ -14,8 +17,6 @@ class Program
         
         // BulkInsertBogusToPgsql.Run();
         
-        var faker = new Faker();
-        Console.WriteLine(faker.Random.AlphaNumeric(64));
         // // 基础随机数据
         // Console.WriteLine($"随机字母数字: {faker.Random.AlphaNumeric(10)}");
         // Console.WriteLine($"随机布尔值: {faker.Random.Bool()}");
@@ -108,5 +109,8 @@ class Program
         // Console.WriteLine(faker.Commerce.Random.Chars());
         // Console.WriteLine(faker.Random.AlphaNumeric(64)); // 可以用于生成密钥   
         // Console.WriteLine(Faker.DefaultStrictMode);
+        
+        
+
     }
 }
